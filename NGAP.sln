@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GAP.Domain", "GAP.Domain\GAP.Domain.csproj", "{B7A5465A-F12A-4FE1-863C-652803631BB6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GAP.Model", "GAP.Model\GAP.Model.csproj", "{BB3B107D-6786-4BB3-A601-46508901FF5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GAP.BussinesLogic", "GAP.BussinesLogic\GAP.BussinesLogic.csproj", "{FF8CF2A9-0923-413E-81A7-8983D6C2CE58}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{B7A5465A-F12A-4FE1-863C-652803631BB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7A5465A-F12A-4FE1-863C-652803631BB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7A5465A-F12A-4FE1-863C-652803631BB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB3B107D-6786-4BB3-A601-46508901FF5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB3B107D-6786-4BB3-A601-46508901FF5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB3B107D-6786-4BB3-A601-46508901FF5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB3B107D-6786-4BB3-A601-46508901FF5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF8CF2A9-0923-413E-81A7-8983D6C2CE58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF8CF2A9-0923-413E-81A7-8983D6C2CE58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF8CF2A9-0923-413E-81A7-8983D6C2CE58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF8CF2A9-0923-413E-81A7-8983D6C2CE58}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
