@@ -45,13 +45,37 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
       </ItemGroup>
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="ImageTest.cs" />
+    <Compile Include="UsuarioTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GAP.BussinesLogic\GAP.BussinesLogic.csproj">
+      <Project>{ff8cf2a9-0923-413e-81a7-8983d6c2ce58}</Project>
+      <Name>GAP.BussinesLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GAP.Domain\GAP.Domain.csproj">
+      <Project>{b7a5465a-f12a-4fe1-863c-652803631bb6}</Project>
+      <Name>GAP.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GAP.Model\GAP.Model.csproj">
+      <Project>{bb3b107d-6786-4bb3-a601-46508901ff5f}</Project>
+      <Name>GAP.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GAP.Utility\GAP.Utility.csproj">
+      <Project>{5fa944b9-c91b-43a4-b075-9c955a2cfa50}</Project>
+      <Name>GAP.Utility</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

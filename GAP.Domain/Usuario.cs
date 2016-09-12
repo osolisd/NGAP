@@ -9,5 +9,7 @@
         public string Email { get; set; }
 
         public string Clave { get; set; }
+
+        public string ClaveSafe { get; set; }
     }
 }
