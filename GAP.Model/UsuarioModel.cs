@@ -1,4 +1,5 @@
 ﻿using GAP.Domain;
+using MySql.Data.MySqlClient;
 using System;
 using System.Data;
 
@@ -53,6 +54,43 @@ namespace GAP.Model
 
                 connection.Open();
                 cmd.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        public bool ValidarUsuario(Usuario usuario)
+        {
+            bool usuarioValido = false;
+
+            try
+            {
+                cmd.CommandText = "UsuariosSeguridadValidar";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@ema", usuario.Email);
+                cmd.Parameters["@ema"].Direction = ParameterDirection.Input;
+
+                cmd.Parameters.AddWithValue("@pas", usuario.ClaveSafe);
+                cmd.Parameters["@pas"].Direction = ParameterDirection.Input;
+
+                connection.Open();
+
+                using (MySqlDataReader rdr = cmd.ExecuteReader())
+                {
+                    if (rdr.Read())
+                    {
+                        usuarioValido = true;
+                    }
+                }
+
+                return usuarioValido;
             }
             catch (Exception)
             {
